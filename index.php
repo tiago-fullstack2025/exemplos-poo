@@ -31,11 +31,36 @@ $clienteB->email = "jon@gmail.com";
 
     <h3>Acessando/lendo os dados dos objetos</h3>
 
+    <!-- Segunda versão (acessando através de um método) -->
+     
     <?=$clienteA->mostrarDados()?>
     
     <?=$clienteB->mostrarDados()?>
 
-    
+
+
+
+
+    <!-- Primeira versão (acessando direto) -->
+    <hr>
+
+    <h4>Cliente A</h4>
+    <ul>
+        <li>Nome: <?= $clienteA->nome ?> </li>
+        <li>Idade: <?= $clienteA->idade ?> anos </li>
+        <li>E-mail: <?= $clienteA->email ?> </li>
+    </ul>
+
+    <!-- Faça os dados do clienteB aparecerem
+    dentro de uma section. Use h4, parágrafo, negrito etc. -->
+    <section>
+        <h4>Cliente B</h4>
+        <ul>
+            <li>Nome: <?= $clienteB->nome ?> </li>
+            <li>Idade: <?= $clienteB->idade ?> anos </li>
+            <li>E-mail: <?= $clienteB->email ?> </li>
+        </ul>
+    </section>
 
     <hr>
     <h3>Visualizando a estrutura dos objetos</h3>
