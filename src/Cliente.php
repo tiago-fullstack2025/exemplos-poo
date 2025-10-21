@@ -9,7 +9,11 @@ class Cliente {
     public function __construct( 
         string $valorDoNome, int $valorDaIdade, string $valorDoEmail ) {
         
-            
+        /* Atribuindo os valores recebidos através dos parâmetros
+        do construtor, aos atributos da classe */
+        $this->nome = $valorDoNome;
+        $this->idade = $valorDaIdade;
+        $this->email = $valorDoEmail;
     }
     
 }
