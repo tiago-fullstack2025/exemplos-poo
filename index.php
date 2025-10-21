@@ -17,31 +17,29 @@ $clienteB->email = "jon@gmail.com";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplos</title>
 </head>
+
 <body>
     <h1>Exemplos de PHP com POO</h1>
     <hr>
     <h2>Trabalhando com classes e objetos</h2>
-    
+
     <h3>Acessando/lendo os dados dos objetos</h3>
+
+    <?=$clienteA->mostrarDados()?>
     
-    <h4>Cliente A</h4>
-    <ul>
-        <li>Nome: <?= $clienteA->nome ?> </li>
-        <li>Idade: <?= $clienteA->idade ?> anos </li>
-        <li>E-mail: <?= $clienteA->email ?> </li>
-    </ul>
+    <?=$clienteB->mostrarDados()?>
 
-    <!-- Faça os dados do clienteB aparecerem
-    dentro de uma section. Use h4, parágrafo, negrito etc. -->
-
+    
 
     <hr>
     <h3>Visualizando a estrutura dos objetos</h3>
-    <pre><?=var_dump($clienteA, $clienteB)?></pre>
+    <pre><?= var_dump($clienteA, $clienteB) ?></pre>
 </body>
+
 </html>
