@@ -7,6 +7,7 @@ class Cliente {
     /* Método construtor: responsável por 'construir'
     um objeto COM seus dados no momento da criação */
     public function __construct( 
+                // Mônica           30                  monica@gmail.com
         string $valorDoNome, int $valorDaIdade, string $valorDoEmail ) {
         
         /* Atribuindo os valores recebidos através dos parâmetros
