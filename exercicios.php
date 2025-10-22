@@ -1,23 +1,10 @@
 <?php
 require_once "src/Livro.php";
 
-$livroUm = new Livro();
-$livroDois = new Livro();
-$livroTres = new Livro();
-
-//var_dump($livroUm);
-
-$livroUm->autor = "Fulano de Tal";
-$livroUm->titulo = "PHP com Orientação a Objetos";
-$livroUm->paginas = 500;
-
-$livroDois->autor = "Beltrano";
-$livroDois->titulo = "HTML5";
-$livroDois->paginas = 125;
-
-$livroTres->autor = "Zezinho";
-$livroTres->paginas = 100;
-$livroTres->titulo = "CSS";
+$livroUm = new Livro("Senhor dos Anéis", "Tolkien", 500);
+$livroDois = new Livro("Hobbit", "Tolkien", 600);
+$livroTres = new Livro("Harry Potter", "Rowling", 1000);
+$livroQuatro = new Livro("ABCD", "Fulano", 100);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -48,6 +35,17 @@ $livroTres->titulo = "CSS";
         <li><?=$livroTres->titulo?></li>
         <li><?=$livroTres->paginas?> páginas</li>
     </ol>
+
+    <hr>
+
+    <p>Título do livro: <?=$livroQuatro->titulo?></p>
+    <p>Autor: <?=$livroQuatro->autor?></p>
+    
+    <!-- Usamos um if para, se houver páginas (ou seja, não for null),
+     faremos aparecer o parágrafo com o dado. -->
+    <?php if( $livroQuatro->paginas ): ?>
+    <p>Páginas: <?=$livroQuatro->paginas?></p>
+    <?php endif; ?>
 
 </body>
 </html>
