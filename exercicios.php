@@ -2,7 +2,7 @@
 require_once "src/Livro.php";
 
 $livroUm = new Livro("Senhor dos Anéis", "Tolkien", 2000);
-$livroDois = new Livro("Hobbit", "Tolkien", 600);
+$livroDois = new Livro("Hobbit", "Tolkien");
 $livroTres = new Livro("Harry Potter", "Rowling", 1000);
 $livroQuatro = new Livro("ABCD", "Fulano", 100);
 ?>
@@ -34,9 +34,15 @@ $livroQuatro = new Livro("ABCD", "Fulano", 100);
 
     <hr>
 
-    <details>
+    <details open>
         <summary><?=$livroDois->titulo?></summary>
-        <p><b>Quantidade de páginas: <?=$livroDois->paginas?></b></p>
+        <p>
+            <b>Quantidade de páginas: 
+                <!-- Tem páginas? Mostra as páginas.
+                 Não tem? Mostra o "não informado" (como se um fosse um if) -->
+                <?=$livroDois->paginas ?? "não informado" ?>
+            </b>
+        </p>
     </details>
 
     <hr>
