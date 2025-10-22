@@ -19,6 +19,8 @@ $livroQuatro = new Livro("ABCD", "Fulano", 100);
 
     <div>
         <h2><?=$livroUm->titulo?></h2>
+
+        <?=$livroUm->verificarTitulo()?>
         
         <!-- Aqui, usamos uma condicional if/else para mostrar
          parágrafos diferentes de acordo com a condição. -->
