@@ -1,7 +1,7 @@
 <?php
 require_once "src/Livro.php";
 
-$livroUm = new Livro("Senhor dos Anéis", "Tolkien", 500);
+$livroUm = new Livro("Senhor dos Anéis", "Tolkien", 2000);
 $livroDois = new Livro("Hobbit", "Tolkien", 600);
 $livroTres = new Livro("Harry Potter", "Rowling", 1000);
 $livroQuatro = new Livro("ABCD", "Fulano", 100);
@@ -19,7 +19,17 @@ $livroQuatro = new Livro("ABCD", "Fulano", 100);
 
     <div>
         <h2><?=$livroUm->titulo?></h2>
-        <p><b>Quantidade de páginas: <?=$livroUm->paginas?></b></p>
+        
+        <!-- Aqui, usamos uma condicional if/else para mostrar
+         parágrafos diferentes de acordo com a condição. -->
+        <?php if($livroUm->paginas): ?>
+            <!-- Se tem páginas, mostramos isso: -->
+            <p><b>Quantidade de páginas: <?=$livroUm->paginas?></b></p>
+        <?php else: ?>
+            <!-- Se não tem, mostramos isso: -->
+            <p style="color: red;"><b>Não foram informadas as páginas</b></p>
+        <?php endif; ?>
+
     </div>
 
     <hr>
