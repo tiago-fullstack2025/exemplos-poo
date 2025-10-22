@@ -21,7 +21,14 @@ $clienteC = new Cliente("Joãozinho", 40, "joaozinho@gmail.com", "11-2135-0300")
     <hr>
     <h2>Trabalhando com classes e objetos</h2>   
     <h3>Visualizando a estrutura dos objetos</h3>
-    <pre><?=var_dump($clienteA, $clienteB, $clienteC)?></pre>
+
+    <div>
+        <h2><?=$clienteA->getNome()?></h2>
+        <p><?=$clienteA->getIdade()?> anos</p>
+        <p><?=$clienteA->getEmail()?></p>
+    </div>
+
+    
     
 </body>
 
