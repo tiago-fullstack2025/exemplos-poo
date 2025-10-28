@@ -3,10 +3,6 @@ require_once "src/Cliente.php";
 
 // Criando um objeto e usando o método construtor para passar os dados
 $clienteA = new Cliente("Mônica", 30, "monica@gmail.com");
-$clienteB = new Cliente("José", 15, "jose@gmail.com");
-
-// Neste objeto, passamos inclusive o telefone (que nos anteriores, foi opcional)
-$clienteC = new Cliente("Joãozinho", 40, "joaozinho@gmail.com", "11-2135-0300");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
